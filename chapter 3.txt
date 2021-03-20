@@ -1,0 +1,40 @@
+SUMMARY:
+	- Chương này, bạn đã học được về pattern Model View Controller và cách Spring MVC cung cấp các tính năng tuân theo mẫu này. Chương này bắt đầu với định
+nghĩa của Dispatcher Servlet, hoạt động như một cổng cho tất cả các ứng dụng dựa trên MVC và sau đó tạo ra ứng dụng đơn giản nhất với framework.
+	- Đưa ra cấu hình dựa trên chú thích thay thế được cung cấp cho Spring MVC. Chủ đề tiếp theo là xử lý các biểu mẫu trong một ứng dụng web với các thẻ
+do Spring MVC cung cấp. Chương này trình bày chi tiết cách thức hoạt động của cơ chế ràng buộc và flow giữa views và controllers được xây dựng với sự trợ 
+giúp của model
+	- Các ví dụ trong chương trình xác thực đầu vào của người dùng với việc tích hợp API xác thực Bean vào Spring MVC. Bạn đã thấy cách xử lý các trường
+hợp ngoại lệ trong ứng dụng. Các ví dụ được cấu hình với ứng dụng dựa trên Spring MVC với Servlet 3.1 và với CommonsFileUpload để nó có thể xử lý việc
+tải tệp lên.
+	- Chương này kết thúc bằng cách chỉ cho bạn cách tích hợp quốc tế hóa và chủ đề vào ứng dụng web của bạn để nguwoif dùng có thể chuyển đổi giữa các
+ngôn ngữ và chủ đề.
+
+WHAT YOU LEARNED IN THIS CHAPTER:
+	-Model View Controller: một mẫu thiết kế mô hình đại diện cho thông tin domain-speccific, chế độ xem đại diện cho mô hình domain với các phần tử giao 
+diện người dùng và bộ điều khiển là phần diễn giải đầu vào của người dùng và biến nó thành mô hình để hiển thị cho người dùng thông qua view.
+	-Dispatcher Servlet: Servlet chính xử lý các yêu cầu HTTP và phân loại các yêu cầu đó tới các kênh thích hợp với sự trợ giúp của handler mappings và
+view resolvers.
+	-HandlerMapping: giao diện được sử dụng để xác định phương thức xử lý nào sẽ được thực thi theo yêu cầu của người dùng. Dispatcher servlet sử dụng các
+triển khai của nó để quyết định bộ điều khiển nào sẽ được thực thi.
+	-ViewResolver: giao diện resolvers là chế độ xem theo tên của nó. Dispatcher servlet sử dụng các ứng dụng của nó để xác định view hiển thị cho người dùng.
+	-Command Object: A POJO/Java bean có giá trị được điền bởi đầu vào của người dùng thông qua một biểu mẫu. Nó đồng nghĩa với đối tượng form và
+form-backing.
+	-spring-form.tld: Tệp mô tả thư viện thẻ biểu mẫu có chứa các thẻ đầu vào như form,input,radiobutton,checkbox,outputtags,label and errors.
+	-path: Thuộc tính của các thẻ biểu mẫu để kích hoạt liên kết giữa lớp view và model.
+	-@Controller: chú thích đánh dấu các lớp,sẽ đóng vai trò làm bộ điều khiển của khái niệm MVC.
+	-RequestMapping: chú thích được sử dụng để ánh xạ các yêu cầu của người dùng tới các lớp hoặc phương thức của trình xử lý.
+	-@ModelAttribute: liên kết giá trị trả về với một tham số bằng khóa được hiển thị cho views. Nó có thể được áp dụng ở mức phương thức hoặc trên đối số
+của phương thức.
+	-@ExceptionHandler: xác định phương thức được chú thích sẽ xử lý các ngoại lệ xảy ra trong lớp controllers mà phương thức được định nghĩa.
+	-@ControllerAdvice: chú thích cho phép bạn tập trung mã tại chỗ và chia sẽ nó trên các bộ điều khiển.
+	-BindingResult: giao diện đại diện cho các kết quả ràng buộc. Nó có thể được sử dụng để truy xuất các lỗi xác thực xảy ra trên model.
+	-StandardServletMultipartResolver: Việc triển khai Servlet 3.1 của giao diện MultipartResolver. Nó được cấu hình một spring bean.
+	-CommonsMultipartResolver: Việc triển khai CommonsFileUpload của giao diện MultipartResolver. Nó được cấu hình như một spring bean.
+	-SessionLocalResolver: Việc triển khai lưu trữ thông tin ngôn ngữ với tên thuộc tính được xác định trước.
+	-FixedThemeResolver: Việc triển khai chủ đề mặc định cho ứng dụng và chủ đề không thể đặt thành chủ đề khác.
+	-SessionThemeResolver: Việc triển khai lưu trữ thông tin chủ đề với tên thuộc tính được xác định trước.
+	-@ContextConfiguration: Chú thích xác định tệp cấu hình vị trí, tệp này sẽ được tải để xây dựng ngữ cảnh ứng dụng.
+	-WebAppConfiguration: Chú thích xác định rằng văn bản sẽ là ngữ cảnh ứng dụng web sẽ được tải bởi @ContextConfiguration.
+	-MockMvc: Lớp triển khai chính được sử dụng trong tests. Nó được xây dựng với một WebApplicationContext và nó thực hiện các hoạt động yêu cầu HTTP.
+	 
